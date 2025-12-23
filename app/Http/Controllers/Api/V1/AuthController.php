@@ -93,7 +93,7 @@ class AuthController extends Controller
                                     //'token' => $token,
                                 'message' => 'Your email confirmed successfully',
                             ]
-                        ], 201);
+                        ], 200);
                 }
         }
         /**
