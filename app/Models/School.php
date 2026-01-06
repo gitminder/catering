@@ -12,6 +12,9 @@ class School extends Model
         // todo при создании заведения (с родительской политикой) автоматически создавать группу едоков для персонала. Если ее нет, повалится регистрация.
         //protected $fillable = ['name', 'nip', 'address', 'post_code'];
         protected $table = 'schools';
+        protected $hidden = [
+            'deleted'
+        ];
         public function pupilEaterGroups():HasMany
         {
                 return $this->hasMany(EaterGroup::class)
