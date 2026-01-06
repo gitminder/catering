@@ -33,7 +33,7 @@ class EatersController extends Controller
         $eater = Eater::create([
             'name' => $request->name,
             'surname' => $request->surname,
-            'patronymic' => $request->patronymic,
+            'patronymic' => empty($request->patronymic)?'':$request->patronymic,
             'eatergroup_id' => $request->eatergroup_id,
             'bgl' => $request->bgl,
             'user_id' => $request->user()->id,
