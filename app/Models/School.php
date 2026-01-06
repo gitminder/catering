@@ -24,5 +24,10 @@ class School extends Model
                 ->where('staff', 1)
                 ->where('deleted', 0);
         }
+        public function eaterGroups():HasMany
+        {
+            return $this->hasMany(EaterGroup::class)
+                ->where('deleted', 0);
+        }
 
 }

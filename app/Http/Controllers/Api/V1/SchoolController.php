@@ -10,7 +10,7 @@ class SchoolController extends Controller
     public function eaterGroups(Request $request){
         return response()->json([
             'success' => true,
-            'data' => $request->user()->school->pupilEaterGroups,
+            'data' => $request->user()->school->eaterGroups,
         ]);
     }
 }
