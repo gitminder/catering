@@ -31,6 +31,7 @@ Route::prefix('v1/auth')->group(function () {
 Route::prefix('v1/school')->group(function () {
     Route::middleware([ AuthApiToken::class])->group(function () {
         Route::get('/eater-groups', [SchoolController::class, 'eaterGroups']);
+        Route::get('/info', [SchoolController::class, 'info']);
     });
 });
 

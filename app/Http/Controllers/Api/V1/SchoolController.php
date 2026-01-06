@@ -13,4 +13,11 @@ class SchoolController extends Controller
             'data' => $request->user()->school->eaterGroups,
         ]);
     }
+    public function info(Request $request){
+            return response()->json([
+                'success' => true,
+                'data' => $request->user()->school,
+            ]);
+    }
+
 }
